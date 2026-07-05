@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -9,36 +10,63 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  height: 100vh;
+  background: linear-gradient(to bottom, #f8e1e7, #eac7d0);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #f8e1e7, #eac7d0);
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
 }
 
-/* botón rosa pastel */
-.btn-15 {
-  padding: 18px 40px;
-  font-size: 20px;
+h1 {
+  color: #fff;
+  font-weight: normal;
+}
+
+p {
+  color: #fff;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+/* botones */
+.btn {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
   border: none;
-  border-radius: 40px;
+  border-radius: 30px;
   background: linear-gradient(135deg, #f8cdda, #f6a5c0);
   color: white;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-.btn-15:hover {
+.btn:hover {
   transform: scale(1.05);
 }
 </style>
+
 </head>
 
 <body>
 
-<button onclick="entrar()" class="btn-15">
-  Haz click aquí!
+
+
+<p>
+Para vivir esta invitación de una forma aún más especial, te recomiendo activar la música antes de ingresar!  
+Luego, abrí la invitación y disfrutá cada detalle.
+</p>
+
+<button class="btn" onclick="activarMusica()">
+ Activar música
+</button>
+
+<button class="btn" onclick="irInvitacion()">
+Ver invitación
 </button>
 
 <audio id="music" loop>
@@ -46,17 +74,15 @@ body {
 </audio>
 
 <script>
-function entrar() {
+function activarMusica() {
   const music = document.getElementById("music");
+  music.play();
+}
 
-  music.play().then(() => {
-    setTimeout(() => {
-      window.location.href = 'https://xn--15aosmarisol-chb.my.canva.site/15derocio';
-    }, 800);
-  }).catch(() => {
-    window.location.href = 'https://xn--15aosmarisol-chb.my.canva.site/15derocio';
-  });
+function irInvitacion() {
+  window.open("https://xn--15aosmarisol-chb.my.canva.site/15derocio", "_blank");
 }
 </script>
+
 </body>
 </html>
