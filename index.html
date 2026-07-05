@@ -50,16 +50,13 @@ function entrar() {
   const music = document.getElementById("music");
 
   music.play().then(() => {
-    // espera un poco y abre Canva
     setTimeout(() => {
-      window.open('https://xn--15aosmarisol-chb.my.canva.site/15', '_blank');
+      window.location.href = 'https://xn--15aosmarisol-chb.my.canva.site/15derocio';
     }, 800);
   }).catch(() => {
-    // por si el navegador bloquea
-    window.open('https://xn--15aosmarisol-chb.my.canva.site/15', '_blank');
+    window.location.href = 'https://xn--15aosmarisol-chb.my.canva.site/15derocio';
   });
 }
 </script>
-
 </body>
 </html>
