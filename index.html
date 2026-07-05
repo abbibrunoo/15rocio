@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis 15</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #f8e1e7, #eac7d0);
+}
+
+/* botón rosa pastel */
+.btn-15 {
+  padding: 18px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #f8cdda, #f6a5c0);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-15:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="entrar()" class="btn-15">
+  Haz click aquí!
+</button>
+
+<audio id="music" loop>
+  <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function entrar() {
+  const music = document.getElementById("music");
+
+  music.play().then(() => {
+    // espera un poco y abre Canva
+    setTimeout(() => {
+      window.open('https://xn--15aosmarisol-chb.my.canva.site/15', '_blank');
+    }, 800);
+  }).catch(() => {
+    // por si el navegador bloquea
+    window.open('https://xn--15aosmarisol-chb.my.canva.site/15', '_blank');
+  });
+}
+</script>
+
+</body>
+</html>
